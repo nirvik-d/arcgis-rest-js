@@ -11,17 +11,17 @@ import GetDataServices from "../lib/DataServices";
 function App() {
   return (
     <div>
-      {/* <GetLayerMetaData /> */}
-      {/* <Authentication /> */}
-      {/* <Geocoding type="geocode" /> */}
-      {/* <Geocoding type="reverse-geocode" /> */}
-      {/* <Routing type="route" /> */}
-      {/* <Routing type="service-area" /> */}
-      {/* <Places type="point" /> */}
-      {/* <Places type="extent" /> */}
-      {/* <GetData type="local" /> */}
-      {/* <GetData type="global" /> */}
-      {/* <GetElevation type="point" /> */}
+      <GetLayerMetaData />
+      <Authentication />
+      <Geocoding type="geocode" />
+      <Geocoding type="reverse-geocode" />
+      <Routing type="route" />
+      <Routing type="service-area" />
+      <Places type="point" />
+      <Places type="extent" />
+      <GetData type="local" />
+      <GetData type="global" />
+      <GetElevation type="point" />
       {/* <GetElevation type="multiple-points" /> */}
       <GetDataServices type="get-meta-data" />
       <GetDataServices type="query-feature-layer-sql" />
