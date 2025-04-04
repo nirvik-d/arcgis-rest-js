@@ -1,17 +1,15 @@
 import "./App.css";
 import Authentication from "../lib/Authentication";
-import PerformGeocoding from "../lib/Geocoding";
-import PerformRouting from "../lib/Routing";
-import FindPlaces from "../lib/Places";
-import GetLayerMetaData from "../lib/DataServices";
 import GetData from "../lib/DataEnrichment";
 import GetElevation from "../lib/Elevation";
 import GetDataServices from "../lib/DataServices";
+import Geocoding from "../lib/Geocoding";
+import Places from "../lib/Places";
+import Routing from "../lib/Routing";
 
 function App() {
   return (
     <div>
-      <GetLayerMetaData />
       <Authentication />
       <Geocoding type="geocode" />
       <Geocoding type="reverse-geocode" />
