@@ -1,0 +1,11 @@
+body {
+  font-family: monospace;
+  color: white;
+  background: #000000;
+}
+
+.result {
+  overflow: auto;
+  padding: 1rem;
+  background: #000000;
+}
