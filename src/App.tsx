@@ -1,5 +1,5 @@
 import "./App.css";
-import Authentication from "../lib/Authentication";
+import GetUserData from "../lib/GetUserData";
 import GetData from "../lib/DataEnrichment";
 import GetElevation from "../lib/Elevation";
 import GetDataServices from "../lib/DataServices";
@@ -10,8 +10,12 @@ import Routing from "../lib/Routing";
 function App() {
   return (
     <div>
-      <Authentication />
-      <Geocoding type="geocode" />
+      <GetUserData
+        nameQuery="john"
+        format="json"
+        url="https://www.arcgis.com/sharing/rest/community/users"
+      />
+      {/* <Geocoding type="geocode" />
       <Geocoding type="reverse-geocode" />
       <Routing type="route" />
       <Routing type="service-area" />
@@ -20,10 +24,10 @@ function App() {
       <GetData type="local" />
       <GetData type="global" />
       <GetElevation type="point" />
-      {/* <GetElevation type="multiple-points" /> */}
+      <GetElevation type="multiple-points" />
       <GetDataServices type="get-meta-data" />
       <GetDataServices type="query-feature-layer-sql" />
-      <GetDataServices type="query-feature-layer-spatial" />
+      <GetDataServices type="query-feature-layer-spatial" /> */}
     </div>
   );
 }

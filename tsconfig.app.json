@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "lib/Authentication.tsx"]
+  "include": ["src", "lib/GetUserData.tsx"]
 }

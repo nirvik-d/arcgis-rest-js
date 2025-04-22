@@ -51,6 +51,7 @@ function GetData({ type }: DataProps) {
         return;
     }
 
+    if (!requestPromise) return;
     requestPromise
       .then((response) => setData(response))
       .catch((err: unknown) => {

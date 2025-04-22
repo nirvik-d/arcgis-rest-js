@@ -1,7 +1,13 @@
 import { request, ApiKeyManager } from "@esri/arcgis-rest-request";
 import { useEffect, useState } from "react";
 
-function Authentication() {
+interface UserDataProps {
+  nameQuery?: any;
+  format?: any;
+  url?: any;
+}
+
+function GetUserData({ nameQuery, format, url }: UserDataProps) {
   const [data, setData] = useState(null);
   const [error, setError] = useState<Error | null>(null);
   const accessToken = import.meta.env.VITE_ARCGIS_API_KEY ?? "";
@@ -13,13 +19,11 @@ function Authentication() {
     }
     const authentication = ApiKeyManager.fromKey(accessToken);
 
-    const url = "https://www.arcgis.com/sharing/rest/community/users";
-
     request(url, {
       authentication,
       params: {
-        q: "john", // Query string to search users
-        f: "json",
+        q: nameQuery, // Query string to search users
+        f: format,
       },
     })
       .then((response) => setData(response))
@@ -44,4 +48,4 @@ function Authentication() {
   );
 }
 
-export default Authentication;
+export default GetUserData;
